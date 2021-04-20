@@ -1,11 +1,25 @@
 const Activity = require('../models/activity');
 
 module.exports = {
-    index
-;
+    index,
+    new: newActivity,
+    create,
+};
+
+
+function index(req, res){
+    Activity.find({},function(err, activities){
+        res.render('activities/index',{ activities })
+    })
+};
+
+function newActivity(req,res){
+    res.render('/activities/new', {})
+    // not sure why I passed activities!!?
 }
 
-
-function index(req,res){
-    res.render('index')
-};
+function create(req,res){
+    Activity.create(req.body, function(err, activities){
+        res.redirect('/activities')
+    })
+}

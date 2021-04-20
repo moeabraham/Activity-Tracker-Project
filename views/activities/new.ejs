@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Add new Activity</h1>
+    <form action="/activites" method="POST">
+        <label> Type of Activity:</label>
+        <input name="title" type="text">
+        <label> Time of Activity:</label>
+        <input name="duration" type="datetime-local">
+        <label> status of Activity:</label>
+        <input name="status" type="checkbox">
+        <label> notes on Activity:</label>
+        <input name="notes" type="text">
+        <!-- <label> Type of Activity:</label>
+        <input name="title" type="text"> -->
+        <input type="submit" value="Add Activity">
+
+    </form>
+</body>
+</html>
