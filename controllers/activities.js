@@ -14,12 +14,16 @@ function index(req, res){
 };
 
 function newActivity(req,res){
-    res.render('/activities/new', {})
+    res.render('activities/new', {})
     // not sure why I passed activities!!?
 }
 
 function create(req,res){
+
+    req.body.nowShowing = !!req.body.nowShowing;
+
     Activity.create(req.body, function(err, activities){
+        
         res.redirect('/activities')
     })
 }

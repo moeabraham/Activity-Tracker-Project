@@ -7,4 +7,6 @@ router.get('/', activitiesCtrl.index);
 // new.ejs return view to add new activity
 router.get('/new',activitiesCtrl.new);
 router.post('/', activitiesCtrl.create)
+
+
 module.exports = router;
