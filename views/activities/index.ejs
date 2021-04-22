@@ -8,5 +8,14 @@
 </head>
 <body>
     <h1>here is a list of all your movies</h1>
+    <ul>
+
+    <% activities.forEach(function(activity){ %>
+        <li><%= activity.title %> </li> 
+       <a href="/activities/<%= activity._id %>"> <input type="submit" value="details"></a>
+
+    <%})%>
+    </ul>
+
 </body>
 </html>

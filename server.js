@@ -7,7 +7,7 @@ require('./config/database');
 
 const indexRouter = require('./routes/index');
 const activitiesRouter = require('./routes/activities');
-
+const notesRouter = require('./routes/notes')
 const app = express();
 
 
@@ -19,7 +19,7 @@ app.use(express.static('piblic'));
 
 app.use('/', indexRouter);
 app.use('/activities', activitiesRouter)
-
+app.use('/', notesRouter);
 
 app.listen(port, function(){
     console.log(`express is listening on port ${port}`)

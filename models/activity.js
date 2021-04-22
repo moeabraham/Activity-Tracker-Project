@@ -1,6 +1,10 @@
  const mongoose = require('mongoose');
  const Schema = mongoose.Schema;
  
+ const noteSchema = new Schema({
+     content: String,
+    
+ },{timestamps: true})
 
  const activitySchema = new Schema({
     //  type: String,
@@ -17,9 +21,10 @@
     status: {
         type: Boolean,
     },
-    notes: {
-        type: String,
-    }
+    // notes: {
+    //     type: String,
+    // },
+    notes: [noteSchema]
  },{ timestamps: true });
 
 

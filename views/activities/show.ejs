@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Details</h1>
+    <ul>
+     <li>  <%= activity.title %></li>
+     <a href="/activities/<%= activity._id %>/edit"><input type="submit" value="edit"></a>
+
+    </ul>
+  
+    <form action="/activities/<%= activity._id %>/notes" method="POST">
+        <label>Add a note:</label>
+        <textarea name="content"></textarea>
+        <input type="submit" value="Add a note">
+
+    </form>
+</body>
+</html>
