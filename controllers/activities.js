@@ -7,6 +7,7 @@ module.exports = {
     show,
     edit,
     update,
+    delete: newDelete,
 };
 
 
@@ -40,13 +41,6 @@ function show(req, res){
     })
 };
 
-function edit(req,res){
-    Activity.findById(req.params.id, function(err, activity){
-        // console.log(req.body)
-            res.render('activities/edit',{activity} )
-        
-    })
-}
 
 // function update(req, res){
 //     Activity.findByIdAndUpdate(req.params.id, req.body, function(err, activity){
@@ -60,22 +54,47 @@ function edit(req,res){
     
 
 // }
+function edit(req,res){
+    Activity.findById(req.params.id, function(err, activity){
+        // console.log(req.body)
+            res.render('activities/edit', {activity} )
+        
+    })
+}
+
+
 
 
 function update(req, res){
+    console.log(req.params.id, req.body)
     Activity.findByIdAndUpdate(req.params.id, req.body, function(err, activity){
         console.log(req.params.id)
+        res.redirect('/activities')
 
-        // Activity.save(function(err){
-        //     // if(true){
-                
-        //     // }
-        //     // activity.title === req.body;
-        //     console.log(input.value)
-
-        // })
+     
+        
     })
     
-            res.redirect('activities/show', { activity })
+
+}   
+
+
+function newDelete(req, res){
+    console.log(req.params.id)
+    Activity.findByIdAndDelete(req.params.id, function(err, activity){
+       
+        res.redirect('/activities')
+
+    })
 
 }
+            // res.redirect('activities/show', { activity })
+
+// Activity.save(function(err){
+    //     // if(true){
+            
+    //     // }
+    //     // activity.title === req.body;
+    //     console.log(input.value)
+
+    // })

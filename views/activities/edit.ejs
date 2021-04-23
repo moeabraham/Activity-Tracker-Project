@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body> -->
+    <%- include('../partials/header') %>
+
     <h1>edit</h1>
-    <form action="/activities/<%= activity._id%>" method="POST">
-        <label></label>
+    <form action="/activities/<%= activity._id %>?_method=PUT" method="POST">
+        <label>edit form</label>
         <input type="text" name="title" value="<%= activity.title %>">
         <input type="submit" value="edit">
     </form>
     
-</body>
+<!-- </body> -->

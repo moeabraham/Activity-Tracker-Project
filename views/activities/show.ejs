@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,19 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body> -->
+    <%- include('../partials/header') %>
+
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+
+
+
+    
     <h1>Details</h1>
     <ul>
      <li>  <%= activity.title %></li>
-     <a href="/activities/<%= activity._id %>/edit"><input type="submit" value="edit"></a>
+     
 
     </ul>
   
-    <form action="/activities/<%= activity._id %>/notes" method="POST">
+    <form action="/activities/<%= activity._id %>" method="POST">
         <label>Add a note:</label>
         <textarea name="content"></textarea>
         <input type="submit" value="Add a note">
 
     </form>
-</body>
-</html>
+
+
+
+<!-- </body>
+</html> -->
