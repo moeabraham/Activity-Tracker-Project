@@ -8,7 +8,7 @@
 </head>
 <body> -->
     <%- include('../partials/header') %>
-
+<!-- 
     <h1>Add new Activity</h1>
     <form action="/activities" method="POST">
         <label> Type of Activity:</label>
@@ -21,10 +21,27 @@
         <!-- <input name="notes" type="text"> -->
         <!-- <label> Type of Activity:</label>
         <input name="title" type="text"> -->
-        <input type="submit" value="Add Activity">
-    </form>
-    
-<!-- 
+        <!-- <input type="submit" value="Add Activity"> -->
+    <!-- </form> -->
+     
+    <div class="row">
+        <form class="col s12" action="/activities" method="POST">
+          <div class="row">
+            <div class="row input-field col s12">
+              <input placeholder="Placeholder" id="first_name" type="text" class="validate" name="title">
+              <label for="first_name"></label></div>
+            
+            <div class=" row input-field col s12">
+              <input id="last_name" type="datetime-local" name="duration" class="validate">
+              <label for="last_name"></label>
+            </div>
+        <div class=" row col s12">
+            <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                <i class="material-icons right">send</i>
+              </button>
+            </div>
+        </form>
+      </div>
     
 </body>
-</html> -->
+</html> 

@@ -1,67 +1,67 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body> -->
-    <%- include('../partials/header') %>
+<%- include('../partials/header') %>
 
 
-    <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
-      </table>
-
-
-
-
-
-
-    
-    <h1>Details</h1>
-    <ul>
-     <li>  <%= activity.title %></li>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">title</th>
+        <th scope="col">duration</th>
+        <th scope="col">status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td><%= activity.title %></td>
+        <td><%= activity.duration %></td>
+        <td><%= activity.status %></td>
+      </tr>
      
+    </tbody>
+  </table>
 
-    </ul>
+  <% if(activity.notes.length){ %>
+    <table>
+      <thead>
+        <tr>
+            <th>note subject</th>
+            <th>note details</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% activity.notes.forEach(activity => {%>
+
+        <tr>
+          <td><%= activity.content %></td>
+        </tr>
+
+        <% }) %>
+  <% } %>
+  </tbody>
+  </table>
+
+<form action="/activities/<%= activity._id %>/notes" method="POST">
+    <label>Add a note:</label>
+    <textarea name="content"></textarea>
+    <input type="submit" value="Add a note">
+
+</form>
+
+
+
+<div>Users:</div>
+<ul><%- activity.users.map(user =>
   
-    <form action="/activities/<%= activity._id %>" method="POST">
-        <label>Add a note:</label>
-        <textarea name="content"></textarea>
-        <input type="submit" value="Add a note">
+    `<li>${user.name}</li>`
+    ).join('') %>
+</ul>
 
-    </form>
-
-
-
-<!-- </body>
-</html> -->
+<form action="/activities/<%= activity._id %>/users" method="POST">
+  <select name="userId">
+    <%- users.map(user =>  %>
+    `    <option value="${user._id}">${user.name}</option>`
+    <% ).join('') %>
+  </select>
+</form>

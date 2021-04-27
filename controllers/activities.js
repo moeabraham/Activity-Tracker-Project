@@ -1,4 +1,6 @@
 const Activity = require('../models/activity');
+const User = require('../models/user');
+
 
 module.exports = {
     index,
@@ -36,8 +38,15 @@ function create(req,res){
 }
 
 function show(req, res){
-    Activity.findById(req.params.id, function(err, activity){
-        res.render('activities/show', {activity})
+    // .populate will query the user array and pull all of the docs based on the ids it finds in the array
+    Activity.findById(req.params.id).populate('user').exec(function (err, activity ){
+        User.find(
+          {_id: {$nin: activity.user}},
+          function(err, users){
+            res.render('activities/show', { activity })
+
+          }  
+        )
     })
 };
 
@@ -80,7 +89,6 @@ function update(req, res){
 
 
 function newDelete(req, res){
-    console.log(req.params.id)
     Activity.findByIdAndDelete(req.params.id, function(err, activity){
        
         res.redirect('/activities')

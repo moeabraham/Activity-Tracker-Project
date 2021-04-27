@@ -1,0 +1,16 @@
+<%- include('../partials/header') %>
+
+<p>User</p>
+<select>
+    <% users.forEach(function(user){%>
+        <option value=""><%= user.name %></option>
+
+
+   <% }) %>
+</select>
+
+<form action="/users" method="POST">
+    <label>Name;</label>
+    <input type="text" name="name">
+    
+</form>
