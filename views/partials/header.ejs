@@ -19,7 +19,16 @@
             <li><a href="/activities/new">New Activity</a></li>
             <li><a href="/users/new">New User</a></li>
             <li><a href="/activities/">All activities</a></li>
+            <li><a href="/users">All users</a></li>
             <li><a href="/">Home</a></li>
+            <li>
+              <% if(user){ %>
+                  <a href="/logout"><i class="material-icons left">trending_flat
+                  </i>Logout</a>
+               <%} else { %> 
+                <a href="/auth/google"><i class="material-icons left">vpn_key</i> Login With Google</a>  
+            <%   } %>
+            </li>
           </ul>
         </div>
       </nav>
