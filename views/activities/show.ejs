@@ -38,7 +38,8 @@
         </tr>
 
         <% }) %>
-  <% } %>
+        <% } %>
+
   </tbody>
   </table>
 
@@ -52,16 +53,19 @@
 
 
 <div>Users:</div>
-<ul><%- activity.users.map(user =>
+
+<ul><%- activity.users.map(user => `<li>${user.name}</li>`).join('') %> 
   
-    `<li>${user.name}</li>`
-    ).join('') %>
 </ul>
+
 
 <form action="/activities/<%= activity._id %>/users" method="POST">
   <select name="userId">
-    <%- users.map(user =>  %>
-    `    <option value="${user._id}">${user.name}</option>`
-    <% ).join('') %>
+    <%- activity.users.map(user =>`<option value="${user._id}">${user.name}</option>`).join('')%>
+     
+
+    
   </select>
+  <button type="submit">Add to users </button>
+
 </form>

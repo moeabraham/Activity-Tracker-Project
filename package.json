@@ -3,9 +3,11 @@
     "bootstrap-icons": "^1.4.1",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
+    "express-session": "^1.17.1",
     "method-override": "^3.0.0",
     "mongoose": "^5.12.5",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "passport": "^0.4.1"
   },
   "scripts": {
     "start": "node server.js"

@@ -23,7 +23,7 @@
         type: Boolean,
     },
     //              type of data              in which collection?  where you can find it
-    user: [{type: Schema.Types.ObjectId, ref: 'User'}],
+    users: [{type: Schema.Types.ObjectId, ref: 'User'}],
     // notes: {
     //     type: String,
     // },

@@ -4,7 +4,7 @@ const Activity = require('../models/activity')
 module.exports = {
     new:newUser,
     create,
-    addToCast,
+    addToUser,
 }
 
 function newUser(req, res){
@@ -31,9 +31,10 @@ function create(req, res){
     })
 };
 
-function addToCast(req, res){
+function addToUser(req, res){
 
-Activiyu.findById(req.params.id, function(err, activity){
+Activity.findById(req.params.id, function(err, activity){
+    
     activity.user.push(req.body.performerId)
     activity.save(function(err){
         res.redirect(`/activities/${activity._id}`)
