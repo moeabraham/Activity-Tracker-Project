@@ -10,7 +10,7 @@ router.get('/users',isLoggedIn, usersCtrl.index)
 router.get('/users/new',isLoggedIn, usersCtrl.new)
 router.post('/users',isLoggedIn, usersCtrl.create)
 
-router.post('/activities/:id/users',isLoggedIn, usersCtrl.addToUser)
+router.post('/activities/:id/users', isLoggedIn, usersCtrl.addToUser)
 
 function isLoggedIn(req, res, next){
     if(req.isAuthenticated()) return next();

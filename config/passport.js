@@ -1,8 +1,12 @@
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 const User = require('../models/user');
-require('./config/passport')
-require('./config/database') 
+// const Activity = require('../models/activity')
+
+// require('./config/database');
+// require('./config/passport');
+
+
 
 
 // we use passport.use to plug in the login options

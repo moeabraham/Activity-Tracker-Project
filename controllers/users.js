@@ -21,12 +21,12 @@ function index(req,res){
 
 function newUser(req, res){
 
-    User.find({}, function(err, users){
+    User.find({}, function(err, user){
 
 
         res.render('users/new',{
             title: "add a user",
-            users  //obj. shorthand
+            users //obj. shorthand
     })
 
 
@@ -47,7 +47,8 @@ function addToUser(req, res){
 
 Activity.findById(req.params.id, function(err, activity){
     
-    activity.user.push(req.body.performerId)
+    activity.users.push(req.body.userId)
+    console.log(req.body.userId)
     activity.save(function(err){
         res.redirect(`/activities/${activity._id}`)
     })

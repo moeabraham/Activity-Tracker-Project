@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A==" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/styleshee/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
@@ -22,11 +24,12 @@
             <li><a href="/users">All users</a></li>
             <li><a href="/">Home</a></li>
             <li>
+              <!-- changed user to logger and it worked!!! -->
               <% if(user){ %>
-                  <a href="/logout"><i class="material-icons left">trending_flat
-                  </i>Logout</a>
+                <% console.log(users) %>
+                  <a href="/logout"><i class="material-icons left">trending_flat</i>Logout <% users.name%></a>
                <%} else { %> 
-                <a href="/auth/google"><i class="material-icons left">vpn_key</i> Login With Google</a>  
+                <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login With Google</a>  
             <%   } %>
             </li>
           </ul>

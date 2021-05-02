@@ -17,7 +17,8 @@
           <tr>
             <th scope="col">#</th>
             <th scope="col">Title</th>
-            <th scope="col">duration</th>
+            <th scope="col">date</th>
+            <th scope="col">time</th>
             <th scope="col">status</th>
             <th scope="col">details</th>
             <th scope="col">edit</th>
@@ -26,10 +27,14 @@
         </thead>
         <tbody>
           <% activities.forEach(function(activity){%>
+            <% console.log(activity) %>
             <tr>
               <th scope="row">1</th>
               <td><%= activity.title %></td>
               <td><%= activity.duration %></td>
+
+              <!-- <td><%= activity.date %></td>
+              <td><%= activity.time %></td> -->
               <td><%= activity.status ='true' ? 'done' : 'not done'  %></td>
               <td><a href="/activities/<%= activity._id %>"> <input type="submit" value="details"></a>
               </td>

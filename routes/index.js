@@ -12,7 +12,7 @@ router.get('/auth/google', passport.authenticate('google', {
 }))
 //callback route after user logs in
 router.get('/oauth2callback', passport.authenticate('google',{
-    successRedirect: '/students',
+    successRedirect: '/activities',
     failureRedirect: '/'
 }))
 
