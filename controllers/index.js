@@ -13,7 +13,7 @@ function index(req,res){
     User.find({}, function(err, users){
         Activity.find({}, function(err, activities){
 
-            res.render('index', {users, user: req.user, activities})
+            res.render('index', {users, currentUser: req.user, activities})
 
         })
 

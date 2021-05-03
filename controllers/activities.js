@@ -25,7 +25,7 @@ function index(req, res){
 function newActivity(req,res){
     Activity.find({}, function(err, activities){
         User.find({}, function(err, users){
-            res.render('activities/new', {activities,user:req.user, users})
+            res.render('activities/new', {activities,currentUser:req.user, users})
 
         })
 
@@ -44,22 +44,34 @@ function create(req,res){
     })
 }
 
+
+
+
 function show(req, res){
+    
     // .populate will query the user array and pull all of the docs based on the ids it finds in the array
-    Activity.findById(req.params.id).populate('users').exec(function (err, activity ){
-
+    Activity.findById(req.params.id).populate('user').exec(function (err, activity ){
         
-        User.find({}, function(err, users){
-            res.render('activities/show', { activity, user:req.user, users })
+        User.find({},function(err, users){
+            res.render('activities/show', { activity, users, user:req.user })
 
-        })
+          
+ 
+
+
+        } )
+
+       
     })
 };
 
 function edit(req,res){
     Activity.findById(req.params.id, function(err, activity){
-        User.find({}, function(err, users){
-            res.render('activities/edit', {activity,user:req.user, users} )
+        User.findById({_id}, function(err, users){
+            activity.save(function(err){
+                res.render('activities/edit', {activity,user:req.user, users} )
+
+            })
 
         })
         // console.log(req.body)

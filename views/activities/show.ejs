@@ -1,5 +1,14 @@
 <%- include('../partials/header') %>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $('select').formSelect();
+});
+      
+</script>
+
+
 <table class="table">
     <thead>
       <tr>
@@ -7,16 +16,16 @@
         <th scope="col">title</th>
         <th scope="col">date</th>
         <th scope="col">time</th>
-        <th scope="col">status</th>
+        <!-- <th scope="col">status</th> -->
       </tr>
     </thead>
     <tbody>
       <tr>
         <th scope="row">1</th>
         <td><%= activity.title %></td>
-        <td><%= activity.date %></td>
-        <td><%= activity.time %></td>
-        <td><%= activity.status %></td>
+        <td><%= activity.duration %></td>
+        <!-- <td><%= activity.time %></td> -->
+        <!-- <td><%= activity.status %></td> -->
       </tr>
      
     </tbody>
@@ -53,26 +62,34 @@
 
 
 
-<div>Users:</div>
+<div class="input-field"> Users:
 
-
- 
 
 
 <h2>users to participate</h2>
 <form  action="/activities/<%= activity._id %>/users" method="POST">
+  <select name="userId">
+    <% console.log(users) %>
 
-
-    <ul >
-      <%- users.map(u => `<li name="userId">${u.name}</li>`).join('') %> 
-    </ul> 
+    <%- users.map(p =>  
+    `<option value="${p._id}"> ${p.name}</option>`
 
     
-  </select>
-  <button type="submit" >Add to users </button>
+    ) %>
 
-</form>
+    <option></option>
+  </select>
+
+
+  <button type="submit">Add to Cast </button>
 
   
+  
+
+ 
+
 </form>
+</div>
+
+  
 

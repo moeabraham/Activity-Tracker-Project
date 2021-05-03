@@ -21,7 +21,7 @@
     },
 
     // time: {
-    //     type: Date
+    //     type: Date,
     // },
 
     status: {
