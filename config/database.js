@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
-const connectionString= 'mongodb+srv://admin:abc1234@cluster0.9vfr4.mongodb.net/Activity-tracker?retryWrites=true&w=majority';
 
-mongoose.connect(connectionString, {
+const connectionURI= process.env.DATABASE_URI
+
+mongoose.connect(connectionURI, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true,
