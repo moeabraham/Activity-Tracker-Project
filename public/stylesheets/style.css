@@ -2,7 +2,9 @@
     margin: auto;
 }
 
-
+#item1{
+height:800px;
+}
 
 /* #index{
     display:grid;

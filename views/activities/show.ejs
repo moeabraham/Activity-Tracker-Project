@@ -16,7 +16,7 @@ $(document).ready(function(){
         <th scope="col">#</th>
         <th scope="col">title</th>
         <th scope="col">date</th>
-        <th scope="col">time</th>
+        <!-- <th scope="col">time</th> -->
         <!-- <th scope="col">status</th> -->
       </tr>
     </thead>
@@ -25,6 +25,7 @@ $(document).ready(function(){
         <th scope="row">1</th>
         <td><%= activity.title %></td>
         <td><%= activity.duration %></td>
+        <%console.log(activity)%>
         <!-- <td><%= activity.time %></td> -->
         <!-- <td><%= activity.status %></td> -->
       </tr>
@@ -56,7 +57,7 @@ $(document).ready(function(){
         <td>
           <a href="/notes/<%= activity._id %>/edit">EDIT</a>
         </td>
-        <td><%= activity.createdAt.toLocaleTimeString() %></td>
+        <td><%= activity.createdAt%></td>
         </tr>
 
         <% }) %>
@@ -80,7 +81,7 @@ $(document).ready(function(){
 </div>
 
 
-<div> friends joining the app
+<!-- <div> friends joining the app -->
 
 
 

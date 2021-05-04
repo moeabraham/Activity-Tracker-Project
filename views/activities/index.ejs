@@ -37,10 +37,12 @@
               <!-- <td><%= activity.date %></td>
               <td><%= activity.time %></td> -->
               <!-- <td><%= activity.status ='true' ? 'done' : 'not done'  %></td> -->
-              <td><a href="/activities/<%= activity._id %>"> <input type="submit" value="details"></a>
+              <td><a href="/activities/<%= activity._id %>"> <button class="waves-effect waves-light small green" btn type="submit" value="details">   <i class="material-icons white">storage</i>
+              </a>
               </td>
               
-              <td><a href="/activities/<%= activity._id %>/edit"><input type="submit" value="edit"></a>
+              <td><a href="/activities/<%= activity._id %>/edit"><button type="submit"class="waves-effect waves-light small green" value=""> <i class="material-icons white">edit</i>
+              </a>
                 
          
                </td>
@@ -48,7 +50,7 @@
                 <td>       
 
                   <form action="/activities/<%= activity._id %>?_method=DELETE" method="POST">
-                    <input type="submit" value="delete"></form>
+                    <button type="submit"class="waves-effect waves-light small red"  value=""> <i class="material-icons ">delete</i></form>
                 </td>
               
             </tr>
