@@ -1,0 +1,8 @@
+<%- include('../partials/header') %>
+
+<form action="/notes/<%= note._id %>?_method=PUT" method="POST">
+    <label>Edit a note:</label>
+    <textarea name="content"></textarea>
+    <input type="submit" value="Add a note">
+
+</form>

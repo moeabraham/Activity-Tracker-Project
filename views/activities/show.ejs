@@ -36,6 +36,8 @@ $(document).ready(function(){
       <thead>
         <tr>
             <th>note subject</th>
+            <th>delete</th>
+            <th>note details</th>
             <th>note details</th>
         </tr>
       </thead>
@@ -45,6 +47,14 @@ $(document).ready(function(){
 
         <tr>
           <td><%= activity.content %></td>
+          <td>
+            <form action="/notes/<%= activity._id %>?_method=DELETE" method="POST">
+            <input type="submit" value="Delete">
+          </form>
+        </td>
+        <td>
+          <a href="/notes/<%= activity._id %>/edit">EDIT</a>
+        </td>
         </tr>
 
         <% }) %>
@@ -62,26 +72,25 @@ $(document).ready(function(){
 
 
 
-<div class="input-field"> Users:
+<div > Users:
 
 
 
 <h2>users to participate</h2>
 <form  action="/activities/<%= activity._id %>/users" method="POST">
-  <select name="userId">
-    <% console.log(users) %>
 
-    <%- users.map(p =>  
-    `<option value="${p._id}"> ${p.name}</option>`
+  <ul class="input-field" name="userId">
 
-    
-    ) %>
+    <% users.forEach(p => { %>
+    <li value="<%= p._id %>"> <%= p.name %></li>
 
-    <option></option>
-  </select>
+    <%  console.log(p._id,'from show ejs') %>
+
+   <% }) %>
+    </li>
 
 
-  <button type="submit">Add to Cast </button>
+  <button type="submit">Add to Users </button>
 
   
   
@@ -92,4 +101,8 @@ $(document).ready(function(){
 </div>
 
   
-
+<script> document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('select');
+  var instances = M.FormSelect.init(elems, options);
+});
+</script>

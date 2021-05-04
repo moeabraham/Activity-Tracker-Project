@@ -45,10 +45,10 @@ function create(req, res){
 };
 
 function addToUser(req, res){
-
+console.log(req.user,'is the add to user params')
 Activity.findById(req.params.id, function(err, activity){
     
-    activity.users.push(req.body.userId)
+    activity.users.push(req.user._id)
     activity.save(function(err){
         res.redirect(`/activities/${activity._id}`)
     })
