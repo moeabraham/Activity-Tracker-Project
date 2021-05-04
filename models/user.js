@@ -7,6 +7,7 @@ const userSchema = new Schema({
     avatarURL: String,
     googleId: String,
     active: String,
+    join: Boolean,
     
     
 }, {timestamps: true });

@@ -9,6 +9,7 @@ $(document).ready(function(){
 </script>
 
 
+
 <table class="table">
     <thead>
       <tr>
@@ -55,6 +56,7 @@ $(document).ready(function(){
         <td>
           <a href="/notes/<%= activity._id %>/edit">EDIT</a>
         </td>
+        <td><%= activity.createdAt.toLocaleTimeString() %></td>
         </tr>
 
         <% }) %>
@@ -66,40 +68,81 @@ $(document).ready(function(){
 <form action="/activities/<%= activity._id %>/notes" method="POST">
     <label>Add a note:</label>
     <textarea name="content"></textarea>
-    <input type="submit" value="Add a note">
+    <input type="submit" value="Add a note" class="waves-effect waves-light btn green">
 
 </form>
+<hr>
+<hr>
+
+<div class="divider">
+  <hr>
+  <hr>
+</div>
+
+
+<div> friends joining the app
 
 
 
-<div > Users:
-
-
-
-<h2>users to participate</h2>
 <form  action="/activities/<%= activity._id %>/users" method="POST">
 
   <ul class="input-field" name="userId">
+   
+   
+    <button type="submit" class="waves-effect waves-light btn green">Join your friends ?</button>
 
-    <% users.forEach(p => { %>
-    <li value="<%= p._id %>"> <%= p.name %></li>
-
-    <%  console.log(p._id,'from show ejs') %>
-
-   <% }) %>
-    </li>
-
-
-  <button type="submit">Add to Users </button>
+    <h1> Users who joined</h1>
 
   
-  
+
+<table>
+  <thead>
+    <tr>
+        <th>#</th>
+        <th>user</th>
+        <th>user img</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <% users.forEach(p => { %>
+
+        <% if(activity.users.includes(p._id)) { %>
+        
+      <th scope="row">1</th>
+      <td><%= p.name %></td>
+      <td><img src="<%= p.avatarURL %>" alt="img not available" class="circle small responsive-image"></td>
+      <!-- <td><%= activity.time %></td> -->
+      <!-- <td><%= activity.status %></td> -->
+    </tr>
+   
+  </tbody>
+
+
+
+
+
+<% } %>
+    
+<% }) %>
+
+
+
+
+
+
 
  
 
 </form>
 </div>
 
+
+
+
+
+  
+  
   
 <script> document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('select');

@@ -20,9 +20,9 @@
         
     },
 
-    // time: {
-    //     type: Date,
-    // },
+    time: {
+        type: Date,
+    },
 
     status: {
         type: Boolean,
