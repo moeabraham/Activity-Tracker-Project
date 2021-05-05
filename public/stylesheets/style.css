@@ -1,11 +1,18 @@
 *{
     margin: auto;
 }
-
-#item1{
-height:800px;
+.card2{
+height:363px;
 }
+.card{
+    border:1px solid black; 
+    min-height:450px; 
+    max-height:450px
+    }
 
+    section{
+        margin-top: 50px;
+    }
 /* #index{
     display:grid;
     grid-column-gap: 50px;
