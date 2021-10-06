@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A==" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css"> -->
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
     
@@ -19,7 +19,7 @@
 
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/stylesheet/style.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
     <title>Document</title>
 </head>
@@ -27,23 +27,24 @@
   <div class="container">
     <nav class="grey darken-3">
         <div class="nav-wrapper">
-          <a href="#" class="brand-logo">Activity logger</a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="/activities/new">New Activity</a></li>
-            <li><a href="/users/new">New User</a></li>
-            <li><a href="/activities/">All activities</a></li>
-            <li><a href="/users">All users</a></li>
+          <a href="#" class="logo">Activity logger</a>
+          <ul id="nav-mobile" >
+            <li><a href="/activities/new" class="hide-on-med-and-down">New Activity</a></li>
+            <li><a href="/users/new" class="hide-on-med-and-down">New User</a></li>
+            <li><a href="/activities/" class="hide-on-med-and-down">All activities</a></li>
+            <li><a href="/users" class="hide-on-med-and-down">All users</a></li>
             <li><a href="/">Home</a></li>
             <li>
               <!-- changed user to logger and it worked!!! -->
               <% if(user){ %>
                   <a href="/logout"><i class="material-icons left">trending_flat</i>Logout <% user.name%></a>
                <%} else { %> 
-                <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login With Google</a>  
+                <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login </a>  
             <%   } %>
             </li>
           </ul>
         </div>
+          
       </nav>
       <main>
     

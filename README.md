@@ -5,3 +5,6 @@ application is very similar to a todo list application that allows users to log 
 Technologies Used: HTML5, CSS3, JS, materialzie, Node.js, Express, Mongoose
 [screenshot](Screen Shot 2021-03-24 at 7.48.20 PM.png)
 
+Future Enahncements : add a UI calendar to home page
+add a search feature
+give users more privacy

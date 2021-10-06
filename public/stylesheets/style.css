@@ -1,18 +1,59 @@
 *{
     margin: auto;
+    /* background-color:red; */
 }
+.nav-wrapper{
+    display:flex;
+}
+
+.nav-wrapper > a{
+    margin-left:1px;
+}
+.nav-wrapper > ul > li {
+    padding:0;
+    margin:0;
+}
+.nav-wrapper > ul {
+    display:flex;
+
+}
+/* .nav-wrapper > ul{
+    margin-left: 40rem;;
+
+} */
+a{
+    padding:0%
+}
+
 .card2{
 height:363px;
 }
 .card{
     border:1px solid black; 
-    min-height:450px; 
-    max-height:450px
+    /* min-height:450px;  */
+    max-height:450px;
+    height:41rem;
+
+    }
+    .card > .card-image{
+        height:31rem;
     }
 
     section{
         margin-top: 50px;
     }
+
+
+.card > .card-image{
+    height:41rem;
+}
+
+.card > .card-image  > img{
+    height: 25rem;
+}
+
+
+
 /* #index{
     display:grid;
     grid-column-gap: 50px;
@@ -29,3 +70,99 @@ height:363px;
     grid-column-end: 4;
 
 } */
+
+
+@media (max-width: 768px) {
+
+
+
+
+.container{
+    width:100vw;
+}
+
+nav > a {
+    font-size:1rem;
+}
+.nav-wrapper{
+    display:flex;
+    flex-direction:row;
+    /* width: 41rem; */
+
+}
+nav > .nav-wrapper > a {
+    /* margin-right:10rem;; */
+    /* font-size:20px; */
+
+    /* margin-right:5rem;; */
+    /* position:absolute; */
+}
+nav > .nav-wrapper > ul {
+    margin-left:0;
+    font-size:1rem;
+    /* margin-right:5rem;; */
+    /* position:absolute; */
+}
+/* .brand-logo{
+    width:22rem;
+} */
+/* nav > .nav-wrapper{
+    height:6rem;
+} */
+.nav-mobile{
+    margin:auto;
+}
+main{
+    display:flex;
+    flex-direction:column
+}
+h1{
+    margin:auto;
+    justify-content:center;
+}
+/* .item1{
+    height:12rem;
+} */
+.card{
+    width:100vw;
+    margin:auto;
+}
+#item2{
+    padding:0;
+    margin:0;
+}
+
+/* nav > .nav-wrapper > .logo{
+    position: none;
+    margin-right:auto;
+}
+/*  */
+
+
+
+
+
+
+
+
+/* .item1{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    order:1;
+}
+.item2{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    order:2;
+
+} */
+
+/* #index{
+    display:flex;
+    flex-direction:column;
+
+    
+} */
+}
