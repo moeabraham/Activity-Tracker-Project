@@ -2,6 +2,8 @@
 
 
 app link : https://activity-project-unit.herokuapp.com/
+
+
 Name of the app: Activity Tracker 
 application is very similar to a todo list application that allows users to log in using their google account and to enter their data or edit/delete them 
 
