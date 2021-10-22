@@ -18,9 +18,9 @@
             <th scope="col">#</th>
             <th scope="col">Title</th>
             <th scope="col">date</th>
-            <th scope="col">time</th>
+            <!-- <th scope="col">time</th> -->
             <!-- <th scope="col">status</th> -->
-            <th scope="col">details</th>
+            <th scope="col">Add Note</th>
             <th scope="col">edit</th>
             <th scope="col">delete</th>
           </tr>
@@ -29,11 +29,12 @@
           <% activities.forEach(function(activity){%>
             <% console.log(activity) %>
             <tr>
-              <th scope="row">1</th>
+              <th scope="row"></th>
               <td><%= activity.title %></td>
-              <td><%= activity.time%></td>
+              <td><%= activity.date %></td>
+              <!-- <td><%= activity.time%></td> -->
 
-              <!-- <td><%= activity.date %></td>
+              <!-- 
               <td><%= activity.time %></td> -->
               <!-- <td><%= activity.status ='true' ? 'done' : 'not done'  %></td> -->
               <td><a href="/activities/<%= activity._id %>"> <button class="waves-effect waves-light small green" btn type="submit" value="details">   <i class="material-icons white">storage</i>
