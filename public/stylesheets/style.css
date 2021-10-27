@@ -16,6 +16,7 @@
 }
 .nav-wrapper > ul {
     display:flex;
+    margin-left:auto;
 
 }
 .card{
