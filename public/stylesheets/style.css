@@ -54,10 +54,15 @@ height:363px;
 .card-action{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    margin: auto;
 }
 
 .card > .card-image  > img{
     height: 25rem;
+}
+.card-action > a {
+    margin:auto;
 }
 .col{
     padding:auto;
@@ -103,13 +108,7 @@ nav > a {
     /* width: 41rem; */
 
 }
-nav > .nav-wrapper > a {
-    /* margin-right:10rem;; */
-    /* font-size:20px; */
 
-    /* margin-right:5rem;; */
-    /* position:absolute; */
-}
 nav > .nav-wrapper > ul {
     margin-left:0;
     font-size:1rem;
