@@ -19,20 +19,19 @@
               <td><%= activity.title %></td>
               <td><%= activity.duration.toLocaleDateString() %></td>
               <!-- <td><%= activity.action ='true' ? 'done' : 'not done'  %></td> -->
-              <td><a href="/activities/<%= activity._id %>"> <button    class="waves-effect waves-light small  " btn type="submit" value="details">   <i class="material-icons white">add</i>
+              <td><a href="/activities/<%= activity._id %>"> <button    class="waves-effect waves-light small  " btn type="submit" value="details">  
               </a>
               </td>
               
-              <td><a href="/activities/<%= activity._id %>/edit"><button type="submit"class="waves-effect waves-light small " value=""> <i class="material-icons light-green lighten-3">mode_edit</i>
+              <td><a href="/activities/<%= activity._id %>/edit"><button type="submit"class="waves-effect waves-light small " value=""> 
               </a>
-                
-         
+   
                </td>
 
                 <td>       
 
                   <form action="/activities/<%= activity._id %>?_method=DELETE" method="POST">
-                    <button type="submit"class="waves-effect waves-light small red"  value=""> <i class="material-icons ">delete</i></form>
+                    <button type="submit"class="waves-effect waves-light small red"  value="delete"> </form>
                 </td>
               
             </tr>
