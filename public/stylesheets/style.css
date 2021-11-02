@@ -8,8 +8,8 @@
 }
 .nav-wrapper{
     display:flex; 
-       /* font-family: 'Montserrat', sans-serif; */
-       font-weight: bold;
+    font-family: 'Tangerine', serif;
+    font-weight: bold;
        font-size:2rem;
 
 }
@@ -29,13 +29,13 @@
 
 }
 .nav-wrapper > ul > li > a {
-    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Tangerine', serif;
     font-weight: 800;
 
 }
 .table{
-    /* font-family: 'Noto Sans', sans-serif;  */
-       font-weight: bold;
+    font-family: 'Tangerine', serif;
+    font-weight: bold;
 
 }
 .waves-effect {
