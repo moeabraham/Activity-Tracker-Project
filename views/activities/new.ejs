@@ -35,6 +35,44 @@
 
 
 
+      <div class="row newActivity" >
+        <form class="col s12" action="/activities" method="POST">
+          <div class="row">
+            <div class="input-field col s6">
+              <input placeholder="Start typing...git" id="first_name" type="text" name="title" class="validate">
+              <label for="first_name"> Name</label>
+            </div>
+          </div>
+          <div class=" row ">
+            <div class="input-field col s6">
+
+            <input id="last_name" type="date" name="duration" class="validate" name="duration" >
+            <label for="last_name">Date</label>
+            </div>
+          </div>
+
+          <div class="row">
+
+              <label>
+                <input type="checkbox" name="status"  />
+                <span>Recurrinig ?</span>
+              </label>
+
+            <!-- <div class="input-field col s12">
+              <input disabled value="I am not editable" id="disabled" type="text" class="validate">
+              <label for="disabled">Disabled</label>
+            </div> -->
+          </div>
+          <div class=" row col s3 ">
+            <button class="btn waves-effect waves-light green" type="submit" name="action">Submit
+                <i class="material-icons right">send</i>
+              </button>
+            </div>
+
+            </div>
+          </div>
+        </form>
+      </div>
     
     
 </body>
