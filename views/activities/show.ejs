@@ -66,29 +66,28 @@
 </div>
 <div class="section">
 
-    <!-- <div>Cast: </div>
+ <div>Cast: </div>
   <ul> <%- activity.users.map( p => 
     `<li>${p.name} </li>`
   ).join('') %>
   
   </ul> 
- -->
-
-<!-- <div> friends joining the app -->
+  
+ <!-- <div> friends joining the app -->
 
 
 
 <form  action="/activities/<%= activity._id %>/users" method="POST">
 
-  <!-- <ul class="input-field" name="userId"> -->
-   <!-- <div class="input-field">
+  <ul class="input-field" name="userId">
+   <div class="input-field">
     <select name="userId">
       <%- users.map(p => 
       `<option value="${p._id}">${p.name}</option>`
     ).join('') %>
   
     </select>
-  </div> -->
+  </div>
     <button type="submit"> Join your friends ?</button>
     <!-- <button type="submit" class="waves-effect waves-light btn green">Join your friends ?</button> -->
 <hr>
