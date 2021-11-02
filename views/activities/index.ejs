@@ -14,6 +14,13 @@
           </tr>
         </thead>
         <tbody>
+          <% activities.forEach(function(activity){%>
+            <tr>
+              <td><%= activity.title %></td>
+              <!-- <td><%= activity.action ='true' ? 'done' : 'not done'  %></td> -->
+            </tr>
+
+          <% }) %>
           
         </tbody>
       </table>
