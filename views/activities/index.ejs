@@ -16,8 +16,9 @@
           <% activities.forEach(function(activity){%>
             <tr>
               <td><%= activity.title %></td>
+              <td><%= activity.duration %></td>
 
-              
+
               <td><%= activity.action ='true' ? 'done' : 'not done'  %></td>
               <td><a href="/activities/<%= activity._id %>"> <button    class="waves-effect waves-light small  " btn type="submit" value="details">   <i class="material-icons white">add</i>
               </a>
