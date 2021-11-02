@@ -6,13 +6,13 @@
     padding:auto;
     /* background-color:red; */
 }
-.nav-wrapper{
+/* .nav-wrapper{
     display:flex; 
     font-family: 'Tangerine', serif;
     font-weight: bold;
        font-size:2rem;
 
-}
+} */
 
 .nav-wrapper > a{
     margin-left:1px;
@@ -28,14 +28,13 @@
     
 
 }
-.nav-wrapper > ul > li > a {
-    font-family: 'Tangerine', serif;
-    font-weight: 800;
+/* .nav-wrapper > ul > li > a {
+    /* font-family: 'Tangerine', serif;
+    font-weight: 800; */
 
-}
+} */
 .table{
-    font-family: 'Tangerine', serif;
-    font-weight: bold;
+    /* font-weight: bold; */
 
 }
 .waves-effect {
