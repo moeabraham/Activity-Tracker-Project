@@ -7,10 +7,6 @@
  },{timestamps: true})
 
  const activitySchema = new Schema({
-    //  type: String,
-    //  duration: Date,
-    //  status: Boolean,
-    //  notes: String
 
     title: {
         type: String

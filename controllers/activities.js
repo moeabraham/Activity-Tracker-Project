@@ -41,10 +41,11 @@ function create(req,res){
 
     // req.body.status = !!req.body.status;
 
-    Activity.create(req.body,req.user,req.params, function(err, activity){
+    Activity.create(req.body, function(err, activity){
         console.log('this is req.body', req.body)
-        console.log('this is req.user', req.user)
-        console.log('this is req.params.id', req.params.id)
+        console.log('activity', activity)
+        // console.log('this is req.user', req.user)
+        // console.log('this is req.params.id', req.params.id)
         // console.log('this is req.params', req)
 
 
@@ -58,11 +59,15 @@ function create(req,res){
 function show(req, res){
     // console.log(req,'this is req.user')
     // .populate will query the user array and pull all of the docs based on the ids it finds in the array
-    Activity.findById(req.params.id).populate('user').exec(function (err, activity ){
-
-        User.find({},function(err, users){
+    Activity.findById(req.params.id).populate('users').exec(function (err, activity ){
+        User.find(
+            {_id : {$nin: activity.users}},function(err, users){
+                // console.log(activty)
+// console.log(users)
             res.render('activities/show', { activity, users, user:req.user })
-
+            // console.log(activity +'activityy')
+            // console.log(users +'users')
+            // console.log(req.body)
           
  
 
@@ -75,7 +80,7 @@ function show(req, res){
 
 function edit(req,res){
     Activity.findById(req.params.id, function(err, activity){
-        console.log('this is req.params.id', req.params.id)
+        // console.log('this is req.params.id', req.params.id)
 
         User.findOne({}, function(err, users){
             activity.save(function(err){
@@ -94,7 +99,7 @@ function edit(req,res){
 
 function update(req, res){
     Activity.findByIdAndUpdate(req.params.id, req.body, function(err, activity){
-        console.log(req.params.id)
+        // console.log(req.params.id)
         res.redirect('/activities')
 
      
