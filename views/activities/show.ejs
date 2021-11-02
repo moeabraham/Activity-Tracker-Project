@@ -8,16 +8,12 @@
       <tr>
         <th scope="col">title</th>
         <th scope="col">date</th>
-        <!-- <th scope="col">time</th> -->
-        <!-- <th scope="col">status</th> -->
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><%= activity.title %></td>
         <td><%= activity.duration.getFullYear() %></td>
-        <%console.log(activity.duration.toLocaleDateString())%>
-        <!-- <td><%= activity.time %></td> -->
         <td><%= activity.status %></td>
       </tr>
      
@@ -70,13 +66,13 @@
 </div>
 <div class="section">
 
-    <div>Cast: </div>
+    <!-- <div>Cast: </div>
   <ul> <%- activity.users.map( p => 
     `<li>${p.name} </li>`
   ).join('') %>
   
   </ul> 
-
+ -->
 
 <!-- <div> friends joining the app -->
 
@@ -85,15 +81,15 @@
 <form  action="/activities/<%= activity._id %>/users" method="POST">
 
   <!-- <ul class="input-field" name="userId"> -->
-   <div class="input-field">
+   <!-- <div class="input-field">
     <select name="userId">
       <%- users.map(p => 
       `<option value="${p._id}">${p.name}</option>`
     ).join('') %>
   
     </select>
-  </div>
-    <button type="submit"> Add to Cast</button>
+  </div> -->
+    <button type="submit"> Join your friends ?</button>
     <!-- <button type="submit" class="waves-effect waves-light btn green">Join your friends ?</button> -->
 <hr>
     <h1> Users who joined</h1>
@@ -140,12 +136,12 @@
 
 </form>
 
-<select class="form-select" aria-label="Default select example">
+<!-- <select class="form-select" aria-label="Default select example">
   <option selected>Open this select menu</option>
   <option value="1">One</option>
   <option value="2">Two</option>
   <option value="3">Three</option>
-</select>
+</select> -->
 </div>
 
 
