@@ -8,6 +8,17 @@
 }
 
 
+.nav-wrapper > ul > li > a {
+    font-family: serif;
+    font-weight: 800; 
+
+ }
+.table{
+   font-weight: bold; 
+
+}
+
+
 .nav-wrapper > a{
     margin-left:1px;
 }
