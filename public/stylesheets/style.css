@@ -9,9 +9,9 @@
 
 
 .nav-wrapper > ul > li > a {
-    font-family: serif;
-    font-weight: 800; 
-
+    font-family: 'Cormorant Garamond', serif;      
+    font-weight: bold; 
+    font-size:1rem;
  }
 .table{
    font-weight: bold; 
@@ -36,9 +36,9 @@
 
 
 
-/* .waves-effect {
+.waves-effect {
     border-radius: 30%;
-} */
+}
 .card{
     border-radius:1rem; 
 }
