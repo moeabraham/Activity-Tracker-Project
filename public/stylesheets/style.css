@@ -81,7 +81,8 @@ height:363px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: auto;
+    margin-top:6rem;
+
 }
 
 .card > .card-image  > img{
@@ -94,10 +95,17 @@ height:363px;
     padding:auto;
     margin:auto;;
 }
-
+.row > .col {
+    float:none;
+}
 h1{
     margin-top:2rem;
     margin-bottom:1rem;
+    display:flex;
+    justify-content:center;
+}
+h4{
+    margin:0;
 }
 
 /* #index{
