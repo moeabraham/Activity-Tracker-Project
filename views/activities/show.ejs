@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="/stylesheets/style.css" /> -->
   <!-- JavaScript for Materialize -->
   <!-- <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+  <link rel="stylesheet" href="/stylesheets/style.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -108,15 +109,16 @@
 
   </tbody>
   </table>
+<section class="notesPart" style="padding: 2rem">
 
-<form action="/activities/<%= activity._id %>/notes" method="POST">
-    <label>Add a note:</label>
-    <textarea name="content"></textarea>
-    <input type="submit" value="Add a note" class="waves-effect waves-light btn green">
+<form action="/activities/<%= activity._id %>/notes" method="POST" id="notesFirst">
+    <label></label>
+    <textarea name="content" style="padding: 1rem"></textarea>
+    <input type="submit" class="btn btn-success"  style="margin-top: 1rem" value="add a note" id="notebutton" class="waves-effect waves-light btn green" >
 
 </form>
-<hr>
-<hr>
+
+</section>
 
 <div class="section">
 
@@ -125,10 +127,11 @@
 
 
 
-<form  action="/activities/<%= activity._id %>/users" method="POST">
+<form  action="/activities/<%= activity._id %>/users" method="POST" id="notes">
 
   <ul class="input-field" name="userId">
    <div class="input-field">
+     <label>List of Users</label>
     <select name="userId">
       <%- users.map(p => 
       `<option value="${p._id}">${p.name}</option>`
@@ -136,7 +139,7 @@
   
     </select>
   </div>
-    <button type="submit"> Join your friends ?</button>
+    <button type="submit" class="btn btn-success"> Join your friends ?</button>
     <!-- <button type="submit" class="waves-effect waves-light btn green">Join your friends ?</button> -->
 <hr>
     <h1> Users who joined</h1>
@@ -144,50 +147,26 @@
   
 
 
-<table>
+<!-- <table>
   <thead>
     <tr>
         <th>#</th>
-        <th>user</th>
+       ` <th>${p.name}</th>`
         <th>user img</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
+    <tr> -->
 
 
-      <div>Cast: </div>
+      <div>Users: </div>
       <ul> <%- activity.users.map( p => 
         `<li>${p.name} </li>`
       ).join('') %>
       
       </ul> 
     
-      <% users.forEach(p => { %>
-
-        <% if(activity.users.includes(p._id)) { %>
-<% console.log(activity.users) %>
-
-      <th scope="row">1</th>
-      <td><%= p.name %></td>
-      <td><img src="<%= p.avatarURL %>" alt="img not available" class="circle small responsive-image"></td>
-    </tr>
-   
-  </tbody>
-
-
-
-
-
-<% } %>
-    
-<% }) %>
-
-
-
-
-
-
+  
 
  
 

@@ -36,9 +36,6 @@
 
 
 
-.waves-effect {
-    border-radius: 30%;
-}
 .card{
     border-radius:1rem; 
 }
@@ -54,27 +51,80 @@
 a{
     padding:0%
 }
+#index{
+    display:flex;
 
-.card2{
+}
+.card{
+    width:25rem;
+    height:10rem;
+}
+.card-body{
+    padding:2rem;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+.card-body> .card-title{
+    justify-content: center;
+    margin:auto;
+    margin-bottom: 1rem;
+    
+}
+
+form > #notebutton{
+    border:1px solid black;
+    padding:auto;
+    border-radius:30%;
+    width:25%;
+    /* color:red; */
+}
+#notesPart{
+padding:2rem;
+margin-bottom:4rem;
+
+}
+
+#notesFirst{
+    display:flex;
+    flex-direction:column;
+    width:50%;
+}
+
+#notes{
+    display:flex;
+    flex-direction:column;
+}
+.seection{
+    display:flex;
+    flex-direction:column;
+    padding:2rem;
+    margin-top:4rem;
+}
+.section > ul >  .input-field > select{
+    margin-top:2rem;
+}
+/* .card2{
 height:363px;
 }
 .card{
     border:1px solid black; 
     /* min-height:450px;  */
-    max-height:450px;
+    /* max-height:450px;
     height:41rem;
 
     }
     .card > .card-image{
         height:31rem;
-    }
+    } */ */
 
     section{
         margin-top: 50px;
     }
 
 
-.card > .card-image{
+/* .card > .card-image{
     height:41rem;
 }
 .card-action{
@@ -83,9 +133,9 @@ height:363px;
     justify-content: center;
     margin-top:6rem;
 
-}
+} */
 
-.card > .card-image  > img{
+/* .card > .card-image  > img{
     height: 25rem;
 }
 .card-action > a {
@@ -94,10 +144,10 @@ height:363px;
 .col{
     padding:auto;
     margin:auto;;
-}
-.row > .col {
+} */
+/* .row > .col {
     float:none;
-}
+} */
 h1{
     margin-top:2rem;
     margin-bottom:1rem;
@@ -171,55 +221,21 @@ h1{
     /* margin-top:2rem; */
     justify-content:center;
 }
-/* .item1{
-    height:12rem;
-} */
-.card{
-    width:100vw;
-    margin:auto;
-}
-#item2{
-    padding:0;
-    margin:0;
-}
 
-.card{
-    margin-bottom:1rem;
-}
-
-
-
-/* nav > .nav-wrapper > .logo{
-    position: none;
-    margin-right:auto;
-}
-/*  */
-
-
-
-
-
-
-
-
-/* .item1{
-    display:flex;
-    flex-direction: column;
-    width:100%;
-    order:1;
-}
-.item2{
-    display:flex;
-    flex-direction: column;
-    width:100%;
-    order:2;
-
-} */
-
-/* #index{
+#index{
     display:flex;
     flex-direction:column;
+}
+.col-sm-6{
+    width:100%;
+}
+.card{
+    width:100vw;
+}
 
-    
-} */
+
+
+
+
+
 }
