@@ -54,10 +54,12 @@
             <li class="nav-item">
               <!-- changed user to logger and it worked!!! -->
               <% if(user){ %>
-                  <a href="/logout" class="nav-link"><i class="material-icons left ">trending_flat</i>Logout <% user.name%></a>
+                  <a href="/logout" class="nav-link">Logout <% user.name%></a>
                <%} else { %> 
-                <a href="/auth/google" class="nav-link"><i class="material-icons left">vpn_key</i>Login </a>  
+                <a href="/auth/google" class="nav-link">Login </a>  
             <%   } %>
+            <!-- <i class="material-icons left">vpn_key</i> -->
+            <!-- <i class="material-icons left ">trending_flat</i> -->
             </li>
           </ul>
         </div>

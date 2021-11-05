@@ -21,7 +21,7 @@
 
 .nav-wrapper > a{
     margin-left:1px;
-    font-size:1.5rem;
+    font-size:2rem;
 }
 .nav-wrapper > ul > li {
     padding:0;
@@ -205,7 +205,7 @@ nav > a {
 
 }
 
-nav > .nav-wrapper > ul {
+nav > .navbar-nav > ul {
     margin-left:0;
     font-size:1rem;
     /* margin-right:5rem;; */
