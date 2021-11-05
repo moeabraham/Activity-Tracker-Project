@@ -198,6 +198,9 @@ nav{
 nav > a {
     font-size: large;
 }
+nav > ul > li > a {
+    font-size:large;
+}
 .nav-wrapper{
     display:flex;
     flex-direction:row;
