@@ -179,7 +179,7 @@ h4{
 @media (max-width: 768px) {
 
 
-    #index{
+   div > #index{
         display:flex;
         flex-direction: column;
     }
