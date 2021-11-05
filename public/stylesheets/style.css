@@ -196,7 +196,7 @@ nav{
 }
 
 nav > a {
-    font-size:1rem;
+    font-size: large;
 }
 .nav-wrapper{
     display:flex;
