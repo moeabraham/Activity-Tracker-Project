@@ -101,7 +101,7 @@
         <td>
           <a href="/notes/<%= activity._id %>/edit">EDIT</a>
         </td>
-        <td><%= activity.createdAt%></td>
+        <td><%= activity.createdAt.toLocaleDateString()%></td>
         </tr>
 
         <% }) %>
