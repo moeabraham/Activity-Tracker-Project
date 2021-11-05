@@ -198,9 +198,6 @@ nav{
 nav > a {
     font-size: large;
 }
-nav > ul > li > a {
-    font-size:large;
-}
 .nav-wrapper{
     display:flex;
     flex-direction:row;
@@ -210,7 +207,7 @@ nav > ul > li > a {
 
 nav > .navbar-nav > ul {
     margin-left:0;
-    font-size:1rem;
+    font-size:large;
     /* margin-right:5rem;; */
     /* position:absolute; */
 }
