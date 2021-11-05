@@ -16,7 +16,7 @@
           <% activities.forEach(function(activity){%>
             <tr>
               <td><%= activity.title %></td>
-              <td><%= activity.duration %></td>
+              <td><%= activity.duration.toLocaleDateString()%></td>
 
 
               <!-- <td><%= activity.action ='true' ? 'done' : 'not done'  %></td> -->
