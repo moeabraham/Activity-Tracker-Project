@@ -178,6 +178,12 @@ h4{
 
 @media (max-width: 768px) {
 
+
+    #index{
+        display:flex;
+        flex-direction: column;
+    }
+
 nav{
     margin-bottom:1rem;
 }
