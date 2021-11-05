@@ -26,10 +26,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="/stylesheets/style.css" />
   <!-- JavaScript for Materialize -->
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 </head>
 <body>
@@ -47,12 +45,12 @@
         <div class="collapse navbar-collapse justify-content-between" id="collapsibleNavbar">
 
           
-          <ul class="navbar-nav mr-auto">
+          <ul class="navbar-nav mr-auto navbar-right">
             <li class="nav-item"><a href="/activities/new" class="nav-link">New Activity</a></li>
             <li class="nav-item"><a href="/users/new" class="nav-link">New User</a></li>
             <li class="nav-item"><a href="/activities/" class="nav-link">All activities</a></li>
             <li class="nav-item"><a href="/users" class="nav-link">All users</a></li>
-            <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+            <!-- <li class="nav-item"><a href="/" class="nav-link">Home</a></li> -->
             <li class="nav-item">
               <!-- changed user to logger and it worked!!! -->
               <% if(user){ %>
